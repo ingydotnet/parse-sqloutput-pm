@@ -6,16 +6,22 @@ use Parse::SQLOutput;
 use YAML::XS;
 use Getopt::Long;
 
-my $as = 'hash';
+my $as = 'hoh';
 my $header = 0;
 my $key = '';
 
-my $input = do { local $/; <> };
+my $input = do { local $/; <STDIN> };
 
-my $data = Parse::SQLOutput->new(
+GetOptions(
+    'as=s' => \$as,
+    'header' => \$header,
+    'key=s' => \$key,
+);
+
+my @data = Parse::SQLOutput->new(
     as => $as,
     header => $header,
     key => $key,
 )->parse($input);
 
-print YAML::XS::Dump($data);
+print YAML::XS::Dump(@data);

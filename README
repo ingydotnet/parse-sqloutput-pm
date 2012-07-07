@@ -12,7 +12,7 @@ DESCRIPTION
     queries, into Perl data structures. There are a few options depending on
     how you want the data to be formatted.
 
-    NOTE: This has only been tested with simple mysql output so far. Patches
+    NOTE: This has only been tested with simple MySQL output so far. Patches
     welcome.
 
 OPTIONS
