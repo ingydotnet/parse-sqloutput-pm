@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+
+use Parse::SQLOutput;
+use YAML::XS;
+use Getopt::Long;
+
+my $as = 'hash';
+my $header = 0;
+my $key = '';
+
+my $input = do { local $/; <> };
+
+my $data = Parse::SQLOutput->new(
+    as => $as,
+    header => $header,
+    key => $key,
+)->parse($input);
+
+print YAML::XS::Dump($data);
