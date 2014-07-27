@@ -1,10 +1,3 @@
-##
-# name:      Parse::SQLOutput
-# abstract:  Parse SQL table output
-# author:    Ingy döt Net <ingy@ingy.net>
-# license:   perl
-# copyright: 2012
-
 use 5.008003;
 use strict;
 use warnings;
@@ -14,7 +7,7 @@ use Mo 0 ();
 package Parse::SQLOutput;
 use Mo qw'default';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has as => (default => sub { 'hoh' });
 has header => (default => sub { 0 });
@@ -121,42 +114,3 @@ sub _zip {
 }
 
 1;
-
-=head1 SYNOPSIS
-
-    use Parse::SQLOutput;
-
-    my $sql_table_output = ...
-    my $data = Parse::SQLOutput->new(<options>)->parse($sql_table_output);
-
-=head1 DESCRIPTION
-
-This module can parse the pretty printed tables you get from SQL queries, into
-Perl data structures. There are a few options depending on how you want the
-data to be formatted.
-
-NOTE: This has only been tested with simple MySQL output so far. Patches
-welcome.
-
-=head1 OPTIONS
-
-This parser can return your data in various forms depending on your needs:
-
-=over
-
-=item ->new(as => 'hoh'|'hol'|'loh'|'lol')
-
-Specify the form that the result should be formatted in. Hash-of-hash,
-hash-of-list, list-of-hash or list-of-list. Default is 'hoh'.
-
-=item ->new(header => 0|1)
-
-Specify whether the header values should be returned. Default is 0. If the
-result is a hash, the header will be in the key of C<''> (empty string).
-
-=item ->new(key => 'key-name')
-
-If the result is a 'hash', specify which column to use as the key of the hash.
-The default is C<''>, which means to use the first column's name.
-
-=back
