@@ -1,4 +1,9 @@
 ---
+version: 0.03
+date:    Sun Jul 27 18:41:44 PDT 2014
+changes:
+- Add Mo as a dep
+---
 version: 0.02
 date:    Sat Jul 26 21:53:54 PDT 2014
 changes:

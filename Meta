@@ -1,7 +1,7 @@
 =meta: 0.0.1
 
 name: Parse-SQLOutput
-version: 0.02
+version: 0.03
 abstract: Parse SQL table output
 homepage: https://metacpan.org/release/parse-sqloutput
 
@@ -17,6 +17,7 @@ author:
 
 requires:
   perl: 5.8.1
+  Mo: 0
 
 devel:
   git: https://github.com/ingydotnet/parse-sqloutput-pm

@@ -1,19 +1,13 @@
-use 5.008003;
-use strict;
-use warnings;
-
-use Mo 0 ();
-
+use strict; use warnings;
 package Parse::SQLOutput;
-use Mo qw'default';
+our $VERSION = '0.03';
 
-our $VERSION = '0.02';
+use Mo qw'default';
 
 has as => (default => sub { 'hoh' });
 has header => (default => sub { 0 });
 has key => (default => sub { '' });
 
-# use XXX;
 sub parse {
     my ($self, $text) = @_;
     my @lines = split /\r?\n/, $text;
