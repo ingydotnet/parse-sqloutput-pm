@@ -33,12 +33,12 @@ This parser can return your data in various forms depending on your needs:
 - `->new(header => 0|1)`
 
   Specify whether the header values should be returned. Default is 0. If the
-  result is a hash, the header will be in the key of C<''> (empty string).
+  result is a hash, the header will be in the key of `''` (empty string).
 
 - `->new(key => 'key-name')`
 
   If the result is a 'hash', specify which column to use as the key of the
-  hash.  The default is C<''>, which means to use the first column's name.
+  hash.  The default is `''`, which means to use the first column's name.
 
 = Author
 
