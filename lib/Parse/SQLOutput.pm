@@ -1,6 +1,6 @@
 use strict; use warnings;
 package Parse::SQLOutput;
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use Mo qw'default';
 
