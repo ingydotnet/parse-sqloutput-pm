@@ -1,29 +1,26 @@
-=meta: 0.0.1
+=meta: 0.0.2
 
 name: Parse-SQLOutput
-version: 0.07
+version: 0.08
 abstract: Parse SQL table output
 homepage: https://metacpan.org/release/parse-sqloutput
-
+language: perl
 license: perl
-copyright: 2012-2014. Ingy döt Net.
+copyright: 2012-2014
+
 author:
   name: Ingy döt Net
   email: ingy@cpan.org
+  homepage: http://ingy.net
   github: ingydotnet
   twitter: ingydotnet
   freenode: ingy
-  homepage: http://ingy.net
-
-requires:
-  perl: 5.8.1
-  Mo: 0
 
 devel:
   git: https://github.com/ingydotnet/parse-sqloutput-pm
   bug: https://github.com/ingydotnet/parse-sqloutput-pm/issues
   irc: irc.freenode.net#pkg
 
-=travis:
-  type: perl
-  irc: irc.freenode.net#pkg
+requires:
+  perl: 5.8.1
+  Mo: 0
